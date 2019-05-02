@@ -48,8 +48,8 @@ exports.book_detail = function(req, res) {
 };
 
 // Display book create form on GET.
-exports.book_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book create GET');
+exports.book_create_get = function(req, res, next) {
+    res.render('book_form', { title: 'Create Book'});
 };
 
 // Handle book create on POST.
